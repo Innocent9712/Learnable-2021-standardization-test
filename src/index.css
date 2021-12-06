@@ -1,5 +1,65 @@
+:root {
+  /* colors */
+  --clr-dark: 218, 76%, 15%;
+  --clr-light:218, 76%, 15%;
+  --clr-white:0 0% 100%;
+
+}
+/*-----------------------*/
+/* Reset */
+/*-----------------------*/
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture
+ {
+    margin: 0;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make forms easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  background-color: #E5E5E5;
+;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

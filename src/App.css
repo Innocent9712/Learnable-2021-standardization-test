@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Circular Std;
+  src: url(../src/assets/fonts/CircularStd-Book.otf)format("opentype");
+  font-weight: normal;
+}
+
+.App {
+  font-family: "Circular Std", sans-serif;
+}

@@ -1,0 +1,68 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    background-color: hsl(var(--clr-white));
+    padding: 0.6em 1em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* margin: 1.2em 1em; */
+}
+
+.toggle-nav {
+    position: absolute;
+    left: 87%;
+    z-index: 2;
+}
+
+.show-nav {
+    display: block;
+    transition: all 0.5s ease-in;
+}
+
+.hide-nav {
+    display: none;
+    transition: display 1s ease-out;
+
+}
+
+.mobile-nav {
+    position: fixed;
+    width: 100vw;
+    top: 3em;
+    left: 0;
+    z-index: 1;
+    background-color: hsl(var(--clr-white));
+    padding: 2em 0.6em 0.6em 0.6em;
+}
+
+.mobile-nav ul li {
+    color: hsla(218, 76%, 15%, 1);
+    font-size: 1.05em;
+    margin: 1.5em 0.6em;
+}
+
+.mobile-nav div {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav div button {
+    border-radius: 5px;
+    padding: 0.7em;
+    margin: 0.7em 0.4em;
+}
+
+.mobile-nav div button:first-child {
+    background-color: hsla(216, 100%, 40%, 1);
+    color: hsl(var(--clr-white));
+}
+
+
+.mobile-nav div button:last-child {
+    background-color: hsla(220, 16%, 96%, 1);
+    color: hsla(217, 13%, 69%, 1);
+}
