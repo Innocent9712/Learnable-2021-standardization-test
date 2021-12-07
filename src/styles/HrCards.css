@@ -1,0 +1,37 @@
+.hr-cards {
+    margin-top: 2.6em;
+    margin-bottom: 2.6em;
+    margin-inline: 0.7em;
+    display: flex;
+    flex-flow: row wrap;
+    gap:2.2em;
+}
+
+.hr-cards .card-holder {
+    border-radius: 10px;
+    background-color: hsl(var(--clr-white));
+    padding: 1.6em 2em 3em 2em;
+    margin-inline: auto;
+    box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+    -webkit-box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+    -moz-box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+}
+
+.card-holder div {
+    width: 45px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.card-holder h4 {
+    font-size: 1.1em;
+    margin: 1.5em 0 0.6em 0;
+}
+
+.card-holder p {
+    width: 95%;
+    color: hsl(var(--clr-light-secondary));
+    font-size: 0.7em;
+    line-height: 1.5em;
+}

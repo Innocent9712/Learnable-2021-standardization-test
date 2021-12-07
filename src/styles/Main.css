@@ -1,0 +1,71 @@
+/* main styles */
+.main {
+    margin-top: 3em;
+}
+
+/* Hero styles */
+.hero {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: hsl(var(--clr-white));
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+.hero img {
+    width: 90vw;
+    /* flex-basis: 70%; */
+    margin-inline: 0.6em;
+    margin-top: 1em;
+}
+
+.hero-text {
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-inline: 0.8em;
+    letter-spacing: 0.03em;
+}
+
+.hero-text h2 {
+    flex-basis: 100%;
+    margin: 1em 0;
+    font-size: 1.96em;
+    color: hsl(var(--clr-dark));
+}
+
+.hero-text p {
+    flex-basis: 60%;
+    font-size: 0.8em;
+    color: hsl(var(--clr-light-secondary));
+
+}
+
+/* Human resource styles */
+
+.hr {
+    margin-inline: 0.8em;
+}
+
+.hr-text {
+    margin-left: 0.5em;
+}
+
+.hr-text h3 {
+    font-size: 1.5em;
+    color:hsl(var(--clr-dark));
+    margin-bottom: 0.7em;
+}
+
+.hr-text p {
+    width: 80%;
+    font-size: 0.7em;
+}
+
+/* Logistics styles */
+
+.admin_logistics {
+    background-color: hsl(var(--clr-white));
+    margin-top: 1em;
+    padding-top:2em;
+}
