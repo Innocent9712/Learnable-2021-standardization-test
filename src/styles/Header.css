@@ -61,6 +61,11 @@ header {
     background-color: hsla(216, 100%, 40%, 1);
     color: hsl(var(--clr-white));
 }
+ .link {
+     width: 100%;
+     color: white;
+     text-decoration: none;
+ }
 
 
 .mobile-nav div button:last-child {

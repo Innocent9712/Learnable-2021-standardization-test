@@ -46,7 +46,8 @@ select {
     font: inherit;
 }
 
-button {
+button,
+input {
   outline: none;
   border: none;
   background-color: transparent;
@@ -59,7 +60,7 @@ ul {
 
 body {
   margin: 0;
-  background-color: #E5E5E5;
+  background-color: #F4F5F7;
 ;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

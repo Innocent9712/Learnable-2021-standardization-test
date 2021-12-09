@@ -1,0 +1,30 @@
+.dashboard_header {
+    
+}
+
+.dashboard_header .profile {
+    display: flex;
+    flex-basis: 70%;
+}
+
+.dashboard_header .profile div {
+    display: flex;
+    flex-basis: 90%;
+    align-items: center;
+}
+
+.dashboard_header .profile div h4 {
+    font-size: 0.8em;
+    flex-basis: 60%;
+    border-left: 1px solid hsla(216, 14%, 79%, 1);
+    color: hsl(var(--clr-dark))
+ ;
+    padding-left: 0.6em;
+    margin-left: 0.6em;
+    font-weight: 500;
+}
+
+.dashboard_header .profile div img {
+    width: 100px;
+    margin-inline: 0.4em;
+}

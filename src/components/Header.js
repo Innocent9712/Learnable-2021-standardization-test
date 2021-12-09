@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 import "../styles/Header.css"
 
 const NavMenu = ({navState}) => {
@@ -9,7 +10,7 @@ const NavMenu = ({navState}) => {
                 <li>About</li>
             </ul>
             <div>
-                <button>Log In</button>
+                <button><Link className="link" to="/login">Log In</Link></button>
                 <button>Sign Up</button>
             </div>
         </div>

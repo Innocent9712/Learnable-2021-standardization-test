@@ -8,18 +8,18 @@ function AdLogCards() {
         <ul className="ad-log">
             <li>
             <Card 
-                bgColor={"#5243AA"}
+                bgColor={" #FF8B00"}
                 icon={sent}
-                mainText={"Employee Management"}
-                subText={"From Hiring & Onboarding to Retiring, the Resource Edge Employee Management module  eliminates all the complexities & paperwork involved in managing your team."}
+                mainText={"Travel and Logistics"}
+                subText={"Make travel requests, get approvals, and have access to travel information."}
             />
             </li>
             <li>
             <Card 
-                bgColor={"#5243AA"}
+                bgColor={"#008DA6"}
                 icon={briefcase}
-                mainText={"Employee Management"}
-                subText={"From Hiring & Onboarding to Retiring, the Resource Edge Employee Management module  eliminates all the complexities & paperwork involved in managing your team."}
+                mainText={"Asset Management"}
+                subText={"Manage the acquisition, assignment, and disposition of assets seamlessly."}
             />
             </li>
         </ul>

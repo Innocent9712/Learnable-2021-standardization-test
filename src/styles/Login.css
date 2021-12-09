@@ -1,0 +1,140 @@
+.hide {
+    visibility: hidden;
+}
+
+.form-container {
+    /* height: 100vh; */
+    display: flex;
+}
+
+.form {
+    max-width: 500px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-inline: auto;
+    width: 80vw;
+    justify-content: center;
+}
+
+.logo_holder {
+    padding: 0.5em 6em;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.logo_holder img:first-child {
+    margin-right: 1em;
+}
+
+.login_form {
+    border-radius: 10px;
+    padding: 3em 2em 3em 2em;
+    background-color: hsl(var(--clr-white));
+    box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+    -webkit-box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+    -moz-box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+}
+
+.form_description {
+    text-align: center;
+}
+
+.form_description h4 {
+    color: hsl(var(--clr-dark));
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+}
+
+.form_description p {
+    color: hsl(var(--clr-light-secondary));
+    font-size: 0.7em;
+}
+
+.userEmail_container {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+}
+.userEmail_text {
+    margin-right: 0.6em;
+}
+
+.userEmail_text h5 {
+    font-size: 1.2em;
+    color: hsl(var(--clr-dark));
+}
+
+.userEmail_text p {
+    font-size: 0.6em;
+    color: hsl(var(--clr-light-secondary));
+}
+
+.input_container,
+.password_container {
+    margin-top: 1.6em;
+    font-size: 0.7em;
+}
+
+.input_container label,
+.password_container label {
+    font-weight: 600;
+    color: hsl(var(--clr-dark));
+}
+
+.input_field {
+ margin: 1em 0;
+ display: flex;
+ justify-content: space-between;
+ padding-inline: 0.5em;
+ padding-top: 0.3em;
+ padding-bottom: 0.3em;
+ border: 1px solid hsla(223, 12%, 89%, 1);
+ border-radius: 3px;
+}
+
+
+.input_field input {
+    width: 85%;
+    color: hsl(var(--clr-light-secondary));
+}
+
+.input_field input:active {
+    background-color: none;
+}
+
+.login_button {
+    font-family: "Circular Std", sans-serif;
+    border-radius: 3px;
+    font-size: 0.9em;
+    background-color: hsla(216, 100%, 40%, 1);
+    width: 100%;
+    margin: 2em 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: hsl(var(--clr-white));
+}
+
+.error {
+    font-size: 0.6em;
+    border: 1px solid rgb(226, 60, 60);
+    background-color: rgba(238, 28, 28, 0.6);
+    color: hsl(var(--clr-white));
+    padding: 1em;
+}
+
+hr {
+    border: 0.7px solid hsla(223, 12%, 89%, 0.8);
+    margin-bottom: 0.8em;
+}
+
+.reset_link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: hsla(216, 100%, 40%, 1);
+    font-size: 0.7em;
+}
