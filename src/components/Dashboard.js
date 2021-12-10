@@ -31,6 +31,10 @@ const DashHeader = () => {
 
     const useAsCheck = useAsCheckFnc()
     console.log(useAsCheck)
+
+    const changeOption = (id) => {
+        globalDispatch({type:"status/userType", payload:id})
+    }
     
 
     return (
@@ -48,7 +52,7 @@ const DashHeader = () => {
 
                 </div>
             </header>
-            <aside className={isOpen && "showNav"}>
+            <aside className={isOpen ? "showNav": null}>
                 <div className="user_details">
                     <h3>
                         {globalState.user.name}
@@ -59,22 +63,22 @@ const DashHeader = () => {
                 </div>
                 <div className="options">
                     <p>Use Resource Edge as</p>
-                    <div className="options_button">
+                    <div className="options_button" onClick={()=>changeOption(1)}>
                         <div className="employee one">
                             <img src={employee} alt={employee}/>
                         </div>
                         <p>Employee</p>
-                        <img className={`checkName ${useAsCheck[1] === 1 && "show"}`} src={check} alt={check} />
+                        <img className={`${useAsCheck[1] === 1 ? "show": "checkName"}`} src={check} alt={check} />
                     </div>
-                    <div className="options_button">
+                    <div className="options_button" onClick={()=>changeOption(0)}>
                         <div className="employee two">
                             <img src={employee} alt={employee}/>
                         </div>
                         <p>Talent Manager</p>
-                        <img className={`${useAsCheck[0] === 0 && "show"}`} src={check} alt={check} />
+                        <img className={`${useAsCheck[0] === 0 ? "show" : "checkName"}`} src={check} alt={check} />
                     </div>
                 </div><hr/>
-                <button className="dashboard_logout">Logout</button>
+                <button onClick={()=>{globalDispatch({type:"auth/logout"})}} className="dashboard_logout">Logout</button>
             </aside>
         </div>
     )

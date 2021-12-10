@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<LandingPage />}/>
             <Route exact path="/login" element={<Login />}/>
-            <Route  path="/dashboard" element={state.user.loggedIn? <Dashboard />:<Navigate replace to= "/login"/>} />
+            <Route  exact path="/dashboard" element={state.user.loggedIn? <Dashboard />:<Navigate replace to= "/login"/>} />
             <Route exact path="/reset_password" element={<ResetPassword />}/>
           </Routes>
         </div>

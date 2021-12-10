@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
+import { GlobalState } from '../App'
 import { useNavigate } from 'react-router'
 import logo_mobile from "../assets/icons/logo_mobile.svg"
 import second_logo from "../assets/icons/second_logo.svg"
@@ -8,8 +9,11 @@ import watch_filled from "../assets/icons/watch-filled.svg"
 import edit from "../assets/icons/edit.svg"
 import "../styles/Login.css"
 import { Link } from 'react-router-dom'
+import Error from './Error'
 
 function Login() {
+    const globalContext = useContext(GlobalState)
+    const {globalState, globalDispatch} = globalContext
     const [userDetails, setUserDetails] = useState({
         email:"",
         password:""
@@ -43,6 +47,7 @@ function Login() {
     useEffect(() => {
             const clearError = setTimeout((error) => {
                 setError(false)
+                setErrorMsg("")
             }, 3000);
         return () => {
             clearTimeout(clearError)
@@ -52,7 +57,7 @@ function Login() {
 
     const handleClick = (e) => {
         e.preventDefault()
-        if (email && isEmailValid) {
+        if (email && isEmailValid && !userDetails.email) {
             setError(false)
             setUserDetails((prevState)=>(
                 {
@@ -62,24 +67,26 @@ function Login() {
                 }
             )) 
         }   else if (!isEmailValid && !password) {
+                console.log(!isEmailValid && !password);
                 setError(true)
                 setErrorMsg("check email input")
-        }   else if (email && password) {
-            if (password.length < 6) {
+        }   else if (password && password.length < 8) {
+                console.log(password.length)
                 setError(true)
                 setErrorMsg("password length should be more than 6 letters.")
-            } else {
+        }   else if (password && password.length > 6) {
+                console.log(password.length)
                 setError(false)
                 setUserDetails((prevState)=>(
                     {
                         ...prevState,
                         password:password 
                     }
-                ))                
-            }
-            setEmail("")         
-            setPassword("")
-            navigate("/dashboard")
+                )) 
+                globalDispatch({type: "auth/signIn", payload:{email: userDetails.email, password:userDetails.password}})  
+                setEmail("")         
+                setPassword("")
+                navigate("/dashboard")             
         } else if (email && !password) {
             setError(true)
             setErrorMsg("password is empty")
@@ -126,8 +133,9 @@ function Login() {
                             </div>
                         )
                     }
+                    {/* <Error errorText={"dummy text"} /> */}
                     {
-                        error && <p className="error">{errorMsg}</p>
+                        error && <Error errorText={errorMsg} />
                     }
                     <button className="login_button" type={userDetails.email && "submit"} onClick={handleClick}>{userDetails.email?"Done":"Next"}</button><hr/>
                     <Link className="reset_link" to="/reset_password">Forgot password?</Link>
