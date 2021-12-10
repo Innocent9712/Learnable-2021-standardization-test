@@ -1,10 +1,14 @@
-.dashboard_header {
+/* .dashboard_header {
     
-}
+} */
 
 .dashboard_header .profile {
     display: flex;
     flex-basis: 70%;
+}
+
+.dashboard_header .profile button {
+    width: 35px;
 }
 
 .dashboard_header .profile div {
@@ -27,4 +31,191 @@
 .dashboard_header .profile div img {
     width: 100px;
     margin-inline: 0.4em;
+}
+
+aside {
+    font-size: 0.9em;
+    background-color: hsl(var(--clr-white));
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    /* left: 0; */
+    left: -120%;
+    padding: 2em 1.5em;
+    box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+    -webkit-box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+    -moz-box-shadow: 2px 7px 18px 0px rgba(94,108,132,0.33);
+}
+
+ .showNav {
+    left: 0;
+}
+
+aside .options_button .checkName {
+    visibility: hidden;
+}
+
+aside .show {
+    visibility: visible;
+}
+
+aside .user_details {
+    font-size: 1.1em;
+}
+
+aside .user_details h3:first-child {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: hsla(218, 13%, 48%, 1);
+}
+
+aside .user_details h3:last-child {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: hsl(var(--clr-dark));
+    margin: 0.9em 0;
+}
+
+aside .options {
+    margin: 2em 0;
+}
+
+aside .options p {
+    font-size: 0.9em;
+    color: hsla(218, 13%, 48%, 1);
+
+}
+
+aside .options .options_button {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.2em 1em;
+}
+
+
+.employee {
+    border-radius: 4px;
+    padding: 0.3em;
+}
+
+.one {
+    background-color: #0052CC;
+}
+.two {
+    background-color: #5243AA;
+}
+
+.employee > img {
+    width: 1em;
+}
+
+aside .options .options_button > p {
+    font-size: 1em;
+    color: hsla(var(--clr-light));
+    flex-basis: 75%;
+    text-align: left;
+}
+
+.dashboard_logout {
+    margin: 1em 0 0 0;
+    color: hsla(var(--clr-light));
+    font-size: 1em;
+}
+
+/* main Dashboard */
+
+.dashboard_container {
+    background: hsl(var(--clr-white));
+    height: 100vh;
+}
+
+.dashboard_container main {
+    /* display: flex; */
+    padding-top: 10em;
+    margin-inline: auto;
+    /* width: 90vw; */
+    padding-inline: 0.8em;
+    max-width: 800px;
+
+}
+
+.dashboard_content {
+    /* padding-top: 10em; */
+    padding-bottom: 5em;
+
+}
+
+.dashboard_content div:last-child h2 {
+    font-size: 1em;
+    margin-left: 0.6em;
+    color:hsla(218, 54%, 20%, 1);
+    ;
+}
+
+.greeting {
+    margin-bottom: 2.3em;
+}
+
+.greeting h2 {
+    font-weight: 500;
+    color: hsl(var(--clr-dark));
+}
+
+.greeting p {
+    font-size: 0.7em;
+    font-weight: 500;
+    /* color: hsla(var(--clr-light)); */
+    margin: 0.6em 0;
+}
+
+.things {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0.6em;
+    padding: 1.2em 1.3em;
+    align-items: center;
+    border: 1px solid hsla(0, 0%, 87%, 1)
+}
+
+.things p {
+    flex-basis: 70%;
+    /* flex-basis: 80%; use for larger screen */
+    text-align: left;
+}
+
+.things img {
+    width: 2em;
+}
+
+.things button {
+    border-radius: 4px;
+    padding: 0.6em;
+}
+
+.thing1 button {
+    color: hsla(216, 100%, 40%, 1);
+}
+
+.thing2 button {
+    color: hsla(var(--clr-light));
+    background-color: hsla(218, 76%, 15%, 0.04);
+}
+
+
+/* Responsiveness for Larger screens */
+
+@media screen and (min-width: 500px) {
+    aside {
+        font-size: 0.7em;
+        width: 50%;
+        max-width: 400px;
+        
+    }
+
+    .dashboard_content {
+        margin-right: 10%;
+    }
 }
