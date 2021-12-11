@@ -1,25 +1,23 @@
 import React from 'react'
 import Card from './Card'
-import briefcase from "../assets/icons/briefcase.svg"
-import sent from "../assets/icons/sent.svg"
 
-function AdLogCards() {
+function AdLogCards({card1, card2}) {
     return (
         <ul className="ad-log">
             <li>
             <Card 
-                bgColor={" #FF8B00"}
-                icon={sent}
-                mainText={"Travel and Logistics"}
-                subText={"Make travel requests, get approvals, and have access to travel information."}
+                bgColor={card1.cardBg}
+                icon={card1.cardIcon}
+                mainText={card1.cardMT}
+                subText={card1.cardST}
             />
             </li>
             <li>
             <Card 
-                bgColor={"#008DA6"}
-                icon={briefcase}
-                mainText={"Asset Management"}
-                subText={"Manage the acquisition, assignment, and disposition of assets seamlessly."}
+                bgColor={card2.cardBg}
+                icon={card2.cardIcon}
+                mainText={card2.cardMT}
+                subText={card2.cardST}
             />
             </li>
         </ul>

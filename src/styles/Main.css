@@ -1,13 +1,13 @@
 /* main styles */
 .main {
     margin-top: 3em;
+    background-color: hsl(var(--clr-white));
 }
 
 /* Hero styles */
 .hero {
     display: flex;
     flex-flow: row wrap;
-    background-color: hsl(var(--clr-white));
     margin-bottom: 2em;
     padding-bottom: 2em;
 }
@@ -44,37 +44,52 @@
 /* Human resource styles */
 
 .hr {
-    margin-inline: 0.8em;
+    padding-inline: 0.8em;
+    padding-top: 2em;
+    background-color: #F4F5F7;
 }
 
 .hr-text {
     margin-left: 0.5em;
 }
 
-.hr-text h3, .a-l_text h3 {
+.hr-text h3, .lc_text h3 {
     font-size: 1.5em;
     color:hsl(var(--clr-dark));
     margin-bottom: 0.7em;
 }
 
-.hr-text p, .a-l_text p {
+.hr-text p, .lc_text p {
     width: 80%;
     font-size: 0.7em;
 }
 
-/* Logistics styles */
-
-.admin_logistics {
+/* Landing Compartment Container */
+.big_cont {
     background-color: hsl(var(--clr-white));
     margin-top: 1em;
     padding-top:2em;
-    padding-inline:1em ;
 }
+
+.landing_compartment {
+    padding-inline:1em ;
+    margin-top: 1em;
+}
+
+.lc_text div p {
+    color: hsl(var(--clr-light-secondary));
+}
+
+/* Logistics styles */
+
+
+/* Finance styles */
+
 
 /* support */
 
 .support {
-    background: hsl(var(--clr-white));
+    /* background: hsl(var(--clr-white)); */
     display: flex;
     flex-flow: row wrap;
     padding: 2em 4em;
@@ -94,4 +109,78 @@
 .support li:nth-child(1),
 .support li:nth-child(3) {
     flex-basis: 40%;
+}
+
+
+@media screen and (min-width: 700px) {
+    .main main {
+        padding-top: 5em;
+    }
+
+    .hero,
+    .support,
+    .hr,
+    .big_cont {
+        padding-inline: 8%;
+    }
+
+    .hero {
+        justify-content: space-between;
+    }
+
+    .hero-text {
+        flex-basis: 50%;
+    }
+
+    .hero-text p {
+        flex-basis: 80%;
+    }
+
+    .hero img {
+        width: 30vw;
+    }
+}
+
+@media screen and (min-width: 900px) {
+
+    .main main h3{
+        font-size: 2em;
+    }
+
+    .lc_text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .lc_text > div {
+        flex-basis: 50%;
+    }
+    .lc_text > div > p {
+        font-size: 0.9em;
+    }
+
+    .lc_text > div > h3 {
+        font-size: 2em;
+    }
+
+    .ad-log {
+        display: flex;
+        flex-basis: 60%;
+        /* font-size: 0.em; */
+        /* flex-basis: 40%; */
+    }
+
+    .ad-log li {
+        font-size: 0.9em;
+    }
+
+    .lc_text .ad-log li .card-holder div {
+        width: 2.5em;
+    }
+
+    .support {
+        margin: 1em 6em;
+    }
+
 }

@@ -51,13 +51,15 @@ header {
     flex-direction: column;
 }
 
-.mobile-nav div button {
+.mobile-nav div button,
+.large div button {
     border-radius: 5px;
     padding: 0.7em;
     margin: 0.7em 0.4em;
 }
 
-.mobile-nav div button:first-child {
+.mobile-nav div button:first-child,
+.large div button:first-child{
     background-color: hsla(216, 100%, 40%, 1);
     color: hsl(var(--clr-white));
 }
@@ -68,7 +70,47 @@ header {
  }
 
 
-.mobile-nav div button:last-child {
+.mobile-nav div button:last-child,
+.large div button:last-child {
     background-color: hsla(220, 16%, 96%, 1);
     color: hsla(217, 13%, 69%, 1);
+}
+
+
+@media screen and (min-width: 700px) {
+    header{
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.9em;
+        padding: 0 5em;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    .landing_header_logo svg {
+        width: 10em;
+    }
+    
+    .large {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 83%;
+    }
+
+    .large div {
+        display: flex;
+    }
+
+    .large div button:first-child {
+        order: 1;
+    }
+
+    .large ul {
+        display: flex;
+    }
+
+    .large ul li {
+        margin-inline: 1.1em;
+    }
 }

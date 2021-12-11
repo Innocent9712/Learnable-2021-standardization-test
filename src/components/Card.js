@@ -7,7 +7,7 @@ function Card({icon, mainText, subText, bgColor}) {
             <div style={{backgroundColor: `${bgColor}`}}>
                 <img src={icon} alt={icon} />
            </div>
-            <h4>{mainText}</h4>
+            <h4 style={{color: "hsla(218, 76%, 15%, 1)"}}>{mainText}</h4>
             <p>{subText}</p>
         </div>
     )

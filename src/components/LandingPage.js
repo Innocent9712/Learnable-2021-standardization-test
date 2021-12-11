@@ -1,12 +1,14 @@
 import React from 'react'
-import Header from '../components/Header';
+import LandingHeader from './LandingHeader';
 import Main from '../components/Main';
+import LandingFooter from './LandingFooter';
 
 function LandingPage() {
     return (
         <>
-            <Header />
+            <LandingHeader />
             <Main />
+            <LandingFooter />
         </>
     )
 }
