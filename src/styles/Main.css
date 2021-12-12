@@ -1,3 +1,5 @@
+/* Mobile Styles */
+
 /* main styles */
 .main {
     margin-top: 3em;
@@ -14,7 +16,6 @@
 
 .hero img {
     width: 90vw;
-    /* flex-basis: 70%; */
     margin-inline: 0.6em;
     margin-top: 1em;
 }

@@ -1,6 +1,7 @@
 import React from 'react'
-import error from "../assets/icons/error.svg"
+import error from "../../assets/icons/error.svg"
 
+// function to create the error message used in the login and reset password pages
 function Error({errorText}) {
     return (
         <div

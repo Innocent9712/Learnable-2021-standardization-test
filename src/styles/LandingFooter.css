@@ -74,3 +74,10 @@ footer div:last-child ul {
     }
 
 }
+
+@media screen and (min-width 650px, max-width: 900px) {
+    footer div:last-child ul li img {
+        width: 17px;
+        margin-inline: 0.7em;
+    }
+}

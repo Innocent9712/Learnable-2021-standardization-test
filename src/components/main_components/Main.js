@@ -1,24 +1,22 @@
 import React from 'react';
-import "../styles/Main.css"
-import heroImg from "../assets/img/hero_img.svg"
-import employeeDir from "../assets/img/employee_directory.png"
-import direct_report from "../assets/img/Direct_Reports - List.png"
-import payroll from "../assets/img/payroll.png"
-import HrCards from './HrCards';
-import AdLogCards from './AdLogCards';
-import tenece from "../assets/img/tenece.png"
-import unn from "../assets/img/unn.png"
-import private_estates from "../assets/img/private_estates.png"
-import genesys from "../assets/img/genesys.png"
-import LandingCompartment from './LandingCompartment';
-import sent from "../assets/icons/sent.svg"
-import briefcase from "../assets/icons/briefcase.svg"
-import pay from "../assets/icons/pay.svg"
-import task_list from "../assets/icons/task-list.svg"
+import LandingCompartment from '../helper_components/LandingCompartment';
+import HrCards from '../helper_components/HrCards';
+import heroImg from "../../assets/img/hero_img.svg"
+import employeeDir from "../../assets/img/employee_directory.png"
+import direct_report from "../../assets/img/Direct_Reports - List.png"
+import payroll from "../../assets/img/payroll.png"
+import tenece from "../../assets/img/tenece.png"
+import unn from "../../assets/img/unn.png"
+import private_estates from "../../assets/img/private_estates.png"
+import genesys from "../../assets/img/genesys.png"
+import sent from "../../assets/icons/sent.svg"
+import briefcase from "../../assets/icons/briefcase.svg"
+import pay from "../../assets/icons/pay.svg"
+import task_list from "../../assets/icons/task-list.svg"
+import "../../styles/Main.css"
 
 
-
-
+// main section of the landing page
 function Main() {
     return (
         <div className= "main">

@@ -1,9 +1,9 @@
 import React from 'react'
-import facebook from "../assets/icons/facebook.svg"
-import instagram from "../assets/icons/instagram.svg"
-import twitter from "../assets/icons/twitter.svg"
-import linkedin from "../assets/icons/linkedin.svg"
-import "../styles/LandingFooter.css"
+import facebook from "../../assets/icons/facebook.svg"
+import instagram from "../../assets/icons/instagram.svg"
+import twitter from "../../assets/icons/twitter.svg"
+import linkedin from "../../assets/icons/linkedin.svg"
+import "../../styles/LandingFooter.css"
 
 function LandingFooter() {
     return (

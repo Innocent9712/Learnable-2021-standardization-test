@@ -1,11 +1,11 @@
 import React from 'react'
 import Card from './Card';
-import team from "../assets/icons/team.svg"
-import goal from "../assets/icons/goal.svg"
-import calender from "../assets/icons/calendar.svg"
-import "../styles/HrCards.css"
+import team from "../../assets/icons/team.svg"
+import goal from "../../assets/icons/goal.svg"
+import calender from "../../assets/icons/calendar.svg"
+import "../../styles/HrCards.css"
 
-
+// makes use of the card component to create cards for the hr section
 function HrCards() {
     return (
         <ul className="hr-cards">

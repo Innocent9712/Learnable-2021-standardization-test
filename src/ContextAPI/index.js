@@ -1,7 +1,9 @@
+// initial state
+
 export const initialState = {
     user: {
         name: "John Doe",
-        email: "chukwuemeka140@gmail.com",
+        email: "",
         password: "",
         loggedIn: false
     },
@@ -16,6 +18,8 @@ export const initialState = {
         }
     ]
 }
+
+// reducers
 
 export const reducer = (state, action) => {
     switch(action.type) {

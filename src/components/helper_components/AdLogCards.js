@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 
+// function to create similar sub sections on the landing page
 function AdLogCards({card1, card2}) {
     return (
         <ul className="ad-log">

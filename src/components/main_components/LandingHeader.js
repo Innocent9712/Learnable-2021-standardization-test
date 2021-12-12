@@ -1,8 +1,9 @@
 import React, {useState, useContext} from 'react'
 import { useNavigate } from 'react-router'
-import { GlobalState } from '../App'
-import "../styles/LandingHeader.css"
+import { GlobalState } from '../../App'
+import "../../styles/LandingHeader.css"
 
+// Nav component for landing page
 const NavMenu = ({navState}) => {
     const globalContext = useContext(GlobalState)
     const {globalState, globalDispatch} = globalContext
@@ -29,6 +30,8 @@ const NavMenu = ({navState}) => {
     )
 }
 
+
+// header component for landing page
 function LandingHeader() {
     const [closed, setClosed] = useState(true)
     const [showNav, setShowNav] = useState(false)

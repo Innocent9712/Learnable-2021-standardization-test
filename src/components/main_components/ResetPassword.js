@@ -1,14 +1,15 @@
 import React,{useState, useEffect, useContext} from 'react'
-import { GlobalState } from '../App'
+import { GlobalState } from '../../App'
 import { Link } from 'react-router-dom'
-import logo_mobile from "../assets/icons/logo_mobile.svg"
-import check from "../assets/icons/check.svg"
-import second_logo from "../assets/icons/second_logo.svg"
-import reset_check from "../assets/icons/reset_check.svg"
-import Error from './Error'
-import "../styles/Login.css"
+import logo_mobile from "../../assets/icons/logo_mobile.svg"
+import check from "../../assets/icons/check.svg"
+import second_logo from "../../assets/icons/second_logo.svg"
+import reset_check from "../../assets/icons/reset_check.svg"
+import Error from '../helper_components/Error'
+import "../../styles/Login.css"
 
 function ResetPassword() {
+    // variables
     const [email, setEmail] = useState("")
     const globalContext = useContext(GlobalState)
     const {globalState, globalDispatch} = globalContext
@@ -23,15 +24,17 @@ function ResetPassword() {
     const [errorMsg, setErrorMsg] = useState("")
     const [passwordMatch, setPasswordMatch] = useState(false)
 
+    // show and remove error message
     useEffect(() => {
         const clearError = setTimeout((error) => {
             setError(false)
         }, 3000);
-    return () => {
-        clearTimeout(clearError)
-    }
-}, [error])
+        return () => {
+            clearTimeout(clearError)
+        }
+    }, [error])
 
+    // handle changes to input field
     const handleChange = (e) => {    
         console.log(e.target.value)
         if (e.target.name==="email") {
@@ -46,6 +49,7 @@ function ResetPassword() {
         }
     }
 
+    // handle submit responses
     const handleClick = (e) => {
         e.preventDefault()
         if (!userDetails.email) {
@@ -97,6 +101,7 @@ function ResetPassword() {
         }
     }
 
+    // tests for email validity
     const checkEmail = () => {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
             setIsEmailValid(true)

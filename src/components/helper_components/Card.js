@@ -1,6 +1,7 @@
 import React from 'react'
-import "../styles/Card.css"
+import "../../styles/Card.css"
 
+// function to create a card that is used a couple of times in the landing page
 function Card({icon, mainText, subText, bgColor}) {
     return (
         <div className="card-holder">

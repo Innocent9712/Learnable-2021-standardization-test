@@ -1,19 +1,20 @@
 import React, {useState, useEffect, useContext} from 'react'
-import { GlobalState } from '../App'
-import { useNavigate } from 'react-router'
-import logo_mobile from "../assets/icons/logo_mobile.svg"
-import second_logo from "../assets/icons/second_logo.svg"
-import check from "../assets/icons/check.svg"
-import watch from "../assets/icons/watch.svg"
-import watch_filled from "../assets/icons/watch-filled.svg"
-import edit from "../assets/icons/edit.svg"
-import "../styles/Login.css"
 import { Link } from 'react-router-dom'
-import Error from './Error'
+import { GlobalState } from '../../App'
+import { useNavigate } from 'react-router'
+import Error from '../helper_components/Error'
+import logo_mobile from "../../assets/icons/logo_mobile.svg"
+import second_logo from "../../assets/icons/second_logo.svg"
+import check from "../../assets/icons/check.svg"
+import watch from "../../assets/icons/watch.svg"
+import watch_filled from "../../assets/icons/watch-filled.svg"
+import edit from "../../assets/icons/edit.svg"
+import "../../styles/Login.css"
 
 function Login() {
+    // variables
     const globalContext = useContext(GlobalState)
-    const {globalState, globalDispatch} = globalContext
+    const {globalDispatch} = globalContext
     const [userDetails, setUserDetails] = useState({
         email:"",
         password:""
@@ -27,23 +28,7 @@ function Login() {
     const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate()
 
-    const handleChange = (e) => {
-        checkEmail()
-        return (
-            e.target.name === "email" ? setEmail(e.target.value):
-            e.target.name === "psw" ? setPassword(e.target.value):
-            ()=>{}
-        )
-    }
-
-    const checkEmail = () => {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-            setIsEmailValid(true)
-        } else {
-            setIsEmailValid(false)
-        }
-    }
-
+    // show and remove error message
     useEffect(() => {
             const clearError = setTimeout((error) => {
                 setError(false)
@@ -54,7 +39,27 @@ function Login() {
         }
     }, [error])
 
+    // handle changes to input field
+    const handleChange = (e) => {
+        checkEmail()
+        return (
+            e.target.name === "email" ? setEmail(e.target.value):
+            e.target.name === "psw" ? setPassword(e.target.value):
+            ()=>{}
+        )
+    }
 
+    // tests for email validity
+    const checkEmail = () => {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+            setIsEmailValid(true)
+        } else {
+            setIsEmailValid(false)
+        }
+    }
+
+
+    // handle submit responses
     const handleClick = (e) => {
         e.preventDefault()
         if (email && isEmailValid && !userDetails.email) {
@@ -67,15 +72,12 @@ function Login() {
                 }
             )) 
         }   else if (!isEmailValid && !password) {
-                console.log(!isEmailValid && !password);
                 setError(true)
                 setErrorMsg("check email input")
         }   else if (password && password.length < 8) {
-                console.log(password.length)
                 setError(true)
                 setErrorMsg("password length should be more than 6 letters.")
         }   else if (password && password.length > 6) {
-                console.log(password.length)
                 setError(false)
                 setUserDetails((prevState)=>(
                     {

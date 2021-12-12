@@ -1,17 +1,19 @@
 import React,{useState, useContext} from 'react'
-import { GlobalState } from '../App'
-import hamburger from "../assets/icons/hamburger.svg"
-import close from "../assets/icons/cross.svg"
-import second_logo from "../assets/icons/second_logo.svg"
-import profile from "../assets/icons/profile_img.svg"
-import employee from "../assets/icons/employee.svg"
-import circle from "../assets/icons/Circle - empty.svg"
-import check from "../assets/icons/check1.svg"
-import "../styles/Dashboard.css"
+import { GlobalState } from '../../App'
+import hamburger from "../../assets/icons/hamburger.svg"
+import close from "../../assets/icons/cross.svg"
+import second_logo from "../../assets/icons/second_logo.svg"
+import profile from "../../assets/icons/profile_img.svg"
+import employee from "../../assets/icons/employee.svg"
+import circle from "../../assets/icons/Circle - empty.svg"
+import check from "../../assets/icons/check1.svg"
+import "../../styles/Dashboard.css"
 
 
 const DashHeader = () => {
     const [isOpen, setIsOpen] = useState(false)
+
+    // contextApi
     const globalContext = useContext(GlobalState)
     const {globalState, globalDispatch} = globalContext
 
@@ -30,7 +32,6 @@ const DashHeader = () => {
     )
 
     const useAsCheck = useAsCheckFnc()
-    console.log(useAsCheck)
 
     const changeOption = (id) => {
         globalDispatch({type:"status/userType", payload:id})
@@ -86,7 +87,7 @@ const DashHeader = () => {
 
 function Dashboard() {
     const globalContext = useContext(GlobalState)
-    const {globalState, globalDispatch} = globalContext
+    const {globalState} = globalContext
     return (
         <div className="dashboard_container">
             <DashHeader />

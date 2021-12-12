@@ -1,8 +1,7 @@
 import React from 'react'
 import AdLogCard from "./AdLogCards"
 
-// cardBg, cardIcon, cardMT, cardST
-
+// makes use of the Adlog sub section to create some sections in the landing page
 function LandingCompartment({sectionClass, divClass, h3Text, pText, imgName, altText, card1, card2}) {
     return (
         <section className={`landing_compartment ${sectionClass}`}>

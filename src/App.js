@@ -1,9 +1,9 @@
 import './App.css';
-import LandingPage from './components/LandingPage';
+import LandingPage from './components/main_components/LandingPage';
 import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom"
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import ResetPassword from './components/ResetPassword';
+import Login from './components/main_components/Login';
+import Dashboard from './components/main_components/Dashboard';
+import ResetPassword from './components/main_components/ResetPassword';
 import React,{useReducer} from "react"
 import { initialState,reducer } from './ContextAPI';
 
