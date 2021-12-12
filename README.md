@@ -5,10 +5,17 @@ You can checkout the live website [here](https://resource-edge.netlify.app)
 
 ### Mobile view
 
-![mobile page view](./src/assets/img/resource-edge-mobile.png)
+
+<!-- ![mobile page view](./src/assets/img/resource-edge-mobile.png){width: 100px} -->
+<p align="center" width="100%">
+    <img src="./src/assets/img/resource-edge-mobile.png" alt="mobile page view"  width="30%" />
+</p>
+
 ### Desktop view
 
-![desktop page view](./src/assets/img/resource-edge-desktop.png)
+<p align="center" width="100%">
+    <img src="./src/assets/img/resource-edge-desktop.png" alt="desktop page view" width="50%" />
+</p>
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
