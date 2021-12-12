@@ -41,7 +41,7 @@ function Login() {
 
     // handle changes to input field
     const handleChange = (e) => {
-        checkEmail()
+        e.target.name === "email" &&  checkEmail(e.target.value)
         return (
             e.target.name === "email" ? setEmail(e.target.value):
             e.target.name === "psw" ? setPassword(e.target.value):
@@ -50,8 +50,8 @@ function Login() {
     }
 
     // tests for email validity
-    const checkEmail = () => {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    const checkEmail = (value) => {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
             setIsEmailValid(true)
         } else {
             setIsEmailValid(false)

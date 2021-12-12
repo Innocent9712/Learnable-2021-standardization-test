@@ -38,7 +38,7 @@ function ResetPassword() {
     const handleChange = (e) => {    
         console.log(e.target.value)
         if (e.target.name==="email") {
-            checkEmail()
+            checkEmail(e.target.value)
             setEmail(e.target.value)
         } else if (e.target.name === "psw" ) {
             setPassword(e.target.value)
@@ -69,7 +69,7 @@ function ResetPassword() {
                 setEmail("")         
                 } else {
                     setError(true)
-                    setErrorMsg("email is not registered")
+                    setErrorMsg("email is not registered, you must be logged in to reset password.")
                 }
             } else if (email && !isEmailValid) {
                 setError(true)
@@ -102,8 +102,8 @@ function ResetPassword() {
     }
 
     // tests for email validity
-    const checkEmail = () => {
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    const checkEmail = (value) => {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
             setIsEmailValid(true)
         } else {
             setIsEmailValid(false)
